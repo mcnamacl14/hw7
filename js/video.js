@@ -17,6 +17,7 @@ figure = document.querySelector('figure')
 document.querySelector('#play').addEventListener("click", function(){
 	console.log("Play Video")
 	video.play()
+	document.querySelector('#volume').textContent = video.volume * 100 + "%"
 	// ADD VOLUME IS / UPDATE THE VOLUME INFORMATION 
 })
 
@@ -76,12 +77,12 @@ document.querySelector('#mute').addEventListener("click", function(){
 
 document.querySelector('#vintage').addEventListener("click", function(){
 	console.log("Vintage")
-	figure.classList.add('oldSchool');
+	video.classList.add('oldSchool');
 })
-
+// SOMETHING HERE IS WRONG 
 document.querySelector('#orig').addEventListener("click", function(){
 	console.log("Original")
-	figure.classList.remove("oldSchool")
+	video.classList.remove("oldSchool")
 })
 
 // // SLIDER 
